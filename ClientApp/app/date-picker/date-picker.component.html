@@ -1,9 +1,13 @@
 <div class="row">
   <input [matDatepicker]="picker"
          [formControl]="date"
+         [min]="minDate"
+         [max]="maxDate"
          (dateInput)="addEvent('input', $event)"
          (dateChange)="addEvent('change', $event)"
          (click)="picker.open()">
   <mat-datepicker #picker></mat-datepicker>
-  <button (click)="picker.open()">Open</button>
+  <button (click)="changeLocale()">Change locale</button>
 </div>
+<h3>Min date: {{minDate}}</h3>
+<h3>Min date: {{maxDate}}</h3>
