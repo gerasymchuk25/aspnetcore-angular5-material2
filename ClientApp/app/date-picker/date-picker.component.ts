@@ -49,11 +49,11 @@ export class DatePickerComponent implements OnInit {
   constructor(private adapter: DateAdapter<any>) {}
 
   ngOnInit() {
-    this.onDateChange.emit(moment(this.date.value).format('DD.MM.YYYY'));
+    this.onDateChange.emit(moment(this.date.value).format('YYYY-MM-DD'));
   }
 
   public addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
-    this.onDateChange.emit(moment(event.value).format('DD.MM.YYYY'));
+    this.onDateChange.emit(moment(event.value).format('YYYY-MM-DD'));
   }
 
   public changeLocale(): void {
