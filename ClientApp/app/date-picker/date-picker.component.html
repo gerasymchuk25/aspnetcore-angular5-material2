@@ -1,0 +1,9 @@
+<div class="row">
+  <input [matDatepicker]="picker"
+         [formControl]="date"
+         (dateInput)="addEvent('input', $event)"
+         (dateChange)="addEvent('change', $event)"
+         (click)="picker.open()">
+  <mat-datepicker #picker></mat-datepicker>
+  <button (click)="picker.open()">Open</button>
+</div>

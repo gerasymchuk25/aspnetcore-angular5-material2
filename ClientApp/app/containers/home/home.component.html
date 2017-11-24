@@ -5,11 +5,13 @@
   <br> For more info check the repo here: <a href="https://github.com/MarkPieszak/aspnetcore-angular2-universal">AspNetCore-Angular2-Universal repo</a>
   <br><br>
 </blockquote>
+
+<!-- Date picker -->
+<app-date-picker (onDateChange)="setDate($event)"></app-date-picker>
 <div class="row">
-  <input [matDatepicker]="picker" placeholder="Choose a date">
-  <mat-datepicker #picker></mat-datepicker>
-  <button (click)="picker.open()">Open</button>
+  <h3>{{date}}</h3>
 </div>
+
 <div class="row">
   <div class="col-lg-6">
     <h2>{{ 'HOME_FEATURE_LIST_TITLE' | translate }} </h2>

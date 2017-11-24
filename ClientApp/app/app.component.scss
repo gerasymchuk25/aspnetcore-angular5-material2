@@ -5,9 +5,13 @@ $navbar-default-color: $light-orange;
 /* Import Bootstrap & Fonts */
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+/* Material styles */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
-
+.mat-calendar-body-selected {
+  background-color: #f8a719 !important;
+}
+/* End of Material styles */
 
 
 /* *** Overall APP Styling can go here ***

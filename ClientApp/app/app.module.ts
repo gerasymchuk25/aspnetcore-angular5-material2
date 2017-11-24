@@ -10,9 +10,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { Ng2BootstrapModule } from 'ngx-bootstrap';
 
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material';
-
 // i18n support
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -25,6 +22,8 @@ import { UserDetailComponent } from './components/user-detail/user-detail.compon
 import { CounterComponent } from './containers/counter/counter.component';
 import { NotFoundComponent } from './containers/not-found/not-found.component';
 import { NgxBootstrapComponent } from './containers/ngx-bootstrap-demo/ngx-bootstrap.component';
+
+import { DatePickerModule } from './date-picker/date-picker.module';
 
 import { LinkService } from './shared/link.service';
 import { UserService } from './shared/user.service';
@@ -52,9 +51,8 @@ export function createTranslateLoader(http: HttpClient, baseHref) {
     ],
     imports: [
         CommonModule,
-      BrowserAnimationsModule,
-        MatDatepickerModule,
-        MatNativeDateModule,
+        BrowserAnimationsModule,
+        DatePickerModule,
         BrowserModule.withServerTransition({
           appId: 'my-app-id' // make sure this matches with your Server NgModule
         }),
